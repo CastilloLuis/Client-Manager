@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Register</title>
+</head>
+<body>
+    
+    <div style="width: 50%; margin-left: auto; margin-right: auto;">
+        <h1>REGISTER INDEX</h1>
+        Name: <input type="text" id="name" class="form-control register-form"> <br>
+        Email: <input type="text" id="email" class="form-control register-form"><br>
+        Date: <input type="date" id="date" class="form-control register-form"><br>
+        Age: <input type="number" id="age" class="form-control register-form"><br>
+        ci: <input type="number" id="ci" class="form-control register-form"><br>
+        <button type="button" class="btn btn-primary" onclick="register()">Register</button>
+    </div>
+
+    <script src="global.js"></script>
+    <script>
+        const register = () => {
+            let data = generateJSON('register-form');
+            if(validateJSON(data)) {
+                console.log('please fill all the fields');
+            } else {
+                fetching(data, 'POST', 'register', (data) => {
+                    console.log(data)
+                })
+            }
+        }
+    </script>
+</body>
+</html>
