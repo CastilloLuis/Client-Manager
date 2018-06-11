@@ -136,8 +136,6 @@ const userPaymentRegister = (req, res) => {
         .catch((err) => console.log(err))
 }
 
-
-
 module.exports.userRegister = (req, res) => userRegister(req, res);
 module.exports.userAppRegister = (req, res) => userAppRegister(req, res);
 module.exports.userLogin = (req, res) => userLogin(req, res);
