@@ -1,14 +1,14 @@
-### Clients Manager
+### CLIENTS MANAGER
 ____
->This application was developed as a personal project for the management and control of clients.
+This application was developed as a personal project for the management and control of clients.
 
 
-### Programming languages
+### PROGRAMMING LANGUAGES
 ____
-##### Stack used: MEAN.
+##### STACK USED: MEAN.
 ##### BACKEND: NODE.JS (EXPRESS.JS), MONGO DB (MONGOOSE)
 ##### FRONTEND: ANGULAR 6, ANGULAR MATERIAL
 
-### Developers
+### DEVELOPERS
 ____
 #### [Luis E. Castillo G.](http://github.com/CastilloLuis)
