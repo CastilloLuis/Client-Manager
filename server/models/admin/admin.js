@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const User = require('../../config/schemas/user');
+const Payments = require('../../config/schemas/payments');
 const Assistance = require('../../config/schemas/asssistance');
 
 mongoose.createConnection('mongodb://localhost/clients-control');

@@ -4,6 +4,7 @@ const User = require('../../config/schemas/user');
 const Payment = require('../../config/schemas/payments');
 const isAuth = require('../../middlewares/isAuth.js');
 const md5 = require('apache-md5');
+const session = require('express-session');;
 
 mongoose.connect('mongodb://localhost/clients-control');
 
@@ -52,8 +53,9 @@ const userAppRegister = (req, res) => {
 }
 
 const userLogin = (req, res) => {
+    let sess;
     let conditions = {
-        username: req.username
+        username: req.body.username
     }
     User.findOne(conditions, (err, docs) => {
         console.log(docs)
@@ -65,7 +67,12 @@ const userLogin = (req, res) => {
                 return res.send({status: 500, msg: 'Username does not exists...'}).json();
             } else {
                 console.log(docs)
-                if (isAuth.comparePassword(req.password, docs.password)) {
+                if (isAuth.comparePassword(req.body.password, docs.password)) {
+                   sess = req.session;
+                   if(conditions.username === 'master'){sess.admin = true;}                   
+                   sess.id = docs._id;
+                   sess.username = docs.username;
+                   sess.identification = docs.identification;
                     return res.send({status: 200, 'msg': 'Welcome back ' + docs.username}).json();
                 } else {
                     return res.send({status: 500, msg: 'Password incorrect, please try again'}).json();
@@ -133,7 +140,7 @@ const userPaymentRegister = (req, res) => {
                     })
             }
         })
-        .catch((err) => console.log(err))
+        .catch((err) => res.send({status: 500, msg: 'The payment was not registered. Please, try again.'}))
 }
 
 module.exports.userRegister = (req, res) => userRegister(req, res);
