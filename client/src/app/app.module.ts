@@ -5,11 +5,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { LoginComponent } from './components/login/login.component';
 
 /* MATERIAL */
 import { MaterialModule } from './material/material.module';
-import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
