@@ -14,7 +14,7 @@ import { MatToolbarModule, MatButtonModule, MatCardModule, MatInputModule, MatFo
     MatInputModule,
     MatProgressSpinnerModule,
     MatIconModule
-  ], 
+  ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
