@@ -17,18 +17,18 @@
         <br/>
         <input type="file" id="profile-picture">
       </div>
-
+      
+      <mat-form-field style="width: 100%;">
+        <span matPrefix>V- &nbsp;</span>
+        <input type="text" matInput placeholder="ID">
+      </mat-form-field>
+      <br/>
       <mat-form-field style="width: 100%;">
         <input type="text" matInput placeholder="FULL NAME">
       </mat-form-field>
       <br/>
       <mat-form-field style="width: 100%;">
         <input type="email" matInput placeholder="EMAIL">
-      </mat-form-field>
-      <br/>
-      <mat-form-field style="width: 100%;">
-        <span matPrefix>V- &nbsp;</span>
-        <input type="text" matInput placeholder="ID">
       </mat-form-field>
       <br/>
       <mat-form-field style="width: 100%;">
@@ -42,6 +42,14 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       <br/>
+      <mat-form-field style="width: 100%;">
+        <input type="text" matInput placeholder="USERNAME" disabled>
+      </mat-form-field>
+      <br/>
+      <mat-form-field style="width: 100%;">
+        <input type="password" matInput placeholder="PASSWORD" disabled>
+      </mat-form-field>
+      <br/>            
       <button mat-raised-button color="primary" type="button" style="width: 100%;" (click)="register()">
         REGISTER
         <i class="material-icons">done</i>

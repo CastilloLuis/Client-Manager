@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule, MatButtonModule, MatCardModule, MatInputModule, MatFormFieldModule, MatCheckboxModule,
          MatProgressSpinnerModule, MatIconModule, MatDatepickerModule, MatNativeDateModule, MatGridListModule,
-         MatDividerModule, MatSidenavModule } from '@angular/material';
-
+         MatDividerModule, MatSidenavModule, MatListModule } from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
@@ -19,7 +18,8 @@ import { MatToolbarModule, MatButtonModule, MatCardModule, MatInputModule, MatFo
     MatNativeDateModule,
     MatGridListModule,
     MatDividerModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
   exports: [
     MatToolbarModule,
@@ -34,7 +34,8 @@ import { MatToolbarModule, MatButtonModule, MatCardModule, MatInputModule, MatFo
     MatNativeDateModule,
     MatGridListModule,
     MatDividerModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
   declarations: []
 })

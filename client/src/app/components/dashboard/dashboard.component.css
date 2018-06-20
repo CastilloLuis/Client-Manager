@@ -1,0 +1,10 @@
+.dashboard-sidenav p{
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.dashboard-sidenav > button {
+  width: 100%;
+  font-size: 15px;
+  padding: 6px 40px;
+}

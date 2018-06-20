@@ -7,15 +7,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 /* MATERIAL */
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
+
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent, data: {animation: 'tiger'}},
-  {path: 'register', component: RegisterComponent, data: {animation: 'tiger'}}
+  {path: 'register', component: RegisterComponent, data: {animation: 'tiger'}},
+  {path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({
@@ -23,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
