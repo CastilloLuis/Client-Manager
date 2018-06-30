@@ -6,7 +6,7 @@ This application was developed as a personal project for the management and cont
 ### PROGRAMMING LANGUAGES
 ____
 ##### STACK USED: MEAN.
-##### FRONTEND: ANGULAR 5, ANGULAR MATERIAL.
+##### FRONTEND: ANGULAR 5, SEMANTIC UI.
 ##### BACKEND: NODE.JS (EXPRESS.JS), MONGO DB (MONGOOSE).
 
 ### DEVELOPERS
