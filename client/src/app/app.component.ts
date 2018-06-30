@@ -49,7 +49,9 @@ import {
   ]
 })
 export class AppComponent {
+
   title = 'app';
+  isVisible = true;
 
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;

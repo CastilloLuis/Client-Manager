@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDrawer } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,12 +7,9 @@ import { MatDrawer } from '@angular/material';
 })
 export class DashboardComponent implements OnInit {
 
-  @ViewChild('drawer') drawer;
-
   constructor() { }
 
   ngOnInit() {
-    this.drawer.toggle();
   }
 
 }

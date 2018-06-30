@@ -7,18 +7,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TableComponent } from './components/table/table.component';
 
-/* MATERIAL */
-import { MaterialModule } from './material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
-
+import {SuiModule} from 'ng2-semantic-ui';
+// import { SemanticModule } from './semantic/semantic.module';
 
 const appRoutes: Routes = [
-  {path: 'login', component: LoginComponent, data: {animation: 'tiger'}},
-  {path: 'register', component: RegisterComponent, data: {animation: 'tiger'}},
-  {path: 'dashboard', component: DashboardComponent}
+      {path: 'login', component: LoginComponent, data: {animation: 'tiger'}},
+      {path: 'register', component: RegisterComponent, data: {animation: 'tiger'}},
+      {path: 'dashboard', component: DashboardComponent, data: {animation: 'tiger'}},
+      // {path: 'table', component: TableComponent, data: {animation: 'tiger'}},
 ];
 
 @NgModule({
@@ -27,14 +27,16 @@ const appRoutes: Routes = [
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    SidebarComponent,
+    DashboardComponent,
+    TableComponent,
+    // TableComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    MaterialModule,
-    FlexLayoutModule
+    SuiModule
   ],
  // exports: [MatToolbarModule],
   providers: [],

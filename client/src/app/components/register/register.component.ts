@@ -12,10 +12,4 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  register() {
-    (document.getElementById('register-form') as HTMLFormElement).style.display = 'none';
-    document.getElementById('login-spinner').style.display = 'block';
-    document.getElementById('spinner-login-div').style.padding = '100px 100px 100px 100px';
-  }
-
 }

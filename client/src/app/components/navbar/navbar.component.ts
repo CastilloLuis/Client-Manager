@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {
   trigger,
   state,
@@ -49,6 +49,8 @@ import {
   ]
 })
 export class NavbarComponent implements OnInit {
+
+  @Input() public isVisible = true;
 
   constructor() { }
 

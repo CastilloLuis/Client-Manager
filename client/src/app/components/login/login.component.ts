@@ -14,10 +14,4 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login() {
-    (document.getElementById('login-form') as HTMLFormElement).style.display = 'none';
-    document.getElementById('login-spinner').style.display = 'block';
-    document.getElementById('spinner-login-div').style.padding = '60px 60px 60px 60px';
-  }
-
 }
